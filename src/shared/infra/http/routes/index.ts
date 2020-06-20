@@ -1,8 +1,7 @@
 import { Router } from 'express';
+import recipesRouter from 'modules/recipes/infra/http/routes/recipes.routes';
 
 const routes = Router();
-routes.get('/test', (req, res) => {
-  return res.json({ test: 'tes' });
-});
+routes.use('/recipes', recipesRouter);
 
 export default routes;

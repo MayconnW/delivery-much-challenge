@@ -1,10 +1,11 @@
+import 'reflect-metadata';
 import express from 'express';
 import 'express-async-errors';
 import cors from 'cors';
 import routes from './routes';
 import handleErrorMiddleware from './middlewares/handleError';
 
-// Verificar necessidade de usar injeção de dependencias
+import 'shared/container';
 
 const app = express();
 

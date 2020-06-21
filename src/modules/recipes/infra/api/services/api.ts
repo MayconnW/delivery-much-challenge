@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const baseRecipeApiURL = 'http://www.recipepuppy.com'; // process.env.RECIPE_API_HOST;
-const baseGiphyApiURL = 'http://api.giphy.com/v1';//process.env.GIPHY_API_HOST;
-const giphyApiKey = 'j1PXoyRp9Eszf2oOxUpETR0Y0VWWEEAU'; // process.env.GIPHY_API_KEY;
+const baseRecipeApiURL = process.env.RECIPE_API_HOST;
+const baseGiphyApiURL = process.env.GIPHY_API_HOST;
+const giphyApiKey = process.env.GIPHY_API_KEY;
 const headers = { Accept: 'application/json' };
 
 const recipeApi = axios.create({
@@ -11,7 +11,7 @@ const recipeApi = axios.create({
 });
 
 const giphyApi = axios.create({
-  baseURL: `${baseGiphyApiURL}`,
+  baseURL: `${baseGiphyApiURL}/v1`,
   headers: { ...headers, api_key: giphyApiKey },
 });
 

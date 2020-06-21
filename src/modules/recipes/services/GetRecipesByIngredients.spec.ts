@@ -1,12 +1,12 @@
 import 'reflect-metadata';
 import AppError from '../../../shared/errors/AppError';
-import FakeRecipesRepository from '../repositories/fakes/FakeRecipesRepository';
 import GetRecipesByIngredients from './GetRecipesByIngredients';
+import '../../../shared/container-fake';
+import { container } from 'tsyringe';
 
 describe('GetRecipesByIngredients', () => {
   it('Should return a list of recipes', async () => {
-    const fakeRepository = new FakeRecipesRepository();
-    const getRecipesService = new GetRecipesByIngredients(fakeRepository);
+    const getRecipesService = container.resolve(GetRecipesByIngredients);
 
     const { recipes } = await getRecipesService.execute({
       ingredients: ['ice', 'vodka', 'juice'],
@@ -22,8 +22,7 @@ describe('GetRecipesByIngredients', () => {
   });
 
   it('Should return a error when do not inform any ingredients', async () => {
-    const fakeRepository = new FakeRecipesRepository();
-    const getRecipesService = new GetRecipesByIngredients(fakeRepository);
+    const getRecipesService = container.resolve(GetRecipesByIngredients);
 
     expect(
       getRecipesService.execute({
@@ -33,8 +32,7 @@ describe('GetRecipesByIngredients', () => {
   });
 
   it('Should return a error when informed more than 3 ingredients', async () => {
-    const fakeRepository = new FakeRecipesRepository();
-    const getRecipesService = new GetRecipesByIngredients(fakeRepository);
+    const getRecipesService = container.resolve(GetRecipesByIngredients);
 
     expect(
       getRecipesService.execute({

@@ -11,9 +11,9 @@ Para desenvolvimentos dos testes foi utilizado a lib Jest.
 O projeto pode ser executado local com Npm ou Yarn, ou via Docker.
 
 ### Passos que devem ser seguidos independente da escolha de onde rodar o app:
-1 - Faça o clone do projeto em uma pasta de sua preferência. 
-2 - Na raiz do projeto existe um arquivo chamado ".env.example", copiei e cole esse arquivo na raíz mesmo com o nome ".env";
-3 - Entre editando esse arquivo ".env", configurações padrões já estarão setadas,a única informação que você precisa preencher é o "GIPHY_API_KEY". Para conseguir a chave de acesso use o link https://developers.giphy.com/docs/api#quick-start-guide;
+  1 - Faça o clone do projeto em uma pasta de sua preferência. 
+  2 - Na raiz do projeto existe um arquivo chamado ".env.example", copiei e cole esse arquivo na raíz mesmo com o nome ".env";
+  3 - Entre editando esse arquivo ".env", configurações padrões já estarão setadas,a única informação que você precisa preencher é o "GIPHY_API_KEY". Para conseguir a chave de acesso use o link https://developers.giphy.com/docs/api#quick-start-guide;
 Pronto agora você pode escolher uma das opções em que quer rodar o projeto.
 
 ### NPM e Yarn (Execute esses passos se deseja rodar o projeto local via Npm ou Yarn)
@@ -27,20 +27,20 @@ Feito a instalação das libs necessárias vamos então rodar o projeto:
 Na raíz do projeto execute um dos comandos a seguir:
 
 #### NPM
-1 - execute: npm install
-Para executar como ambiente de desenvolvimento:
-2 - execute: npm dev:server
-Para executar como ambiente de produção:
-2 - execute: npm build
-3 - execute: npm start
+  1 - execute: npm install
+  Para executar como ambiente de desenvolvimento:
+  2 - execute: npm dev:server
+  Para executar como ambiente de produção:
+  2 - execute: npm build
+  3 - execute: npm start
 
 #### Yarn
-1 - execute: yarn
-Para executar como ambiente de desenvolvimento:
-2 - execute: yarn dev:server
-Para executar como ambiente de produção:
-2 - execute: yarn build
-3 - execute: yarn start
+  1 - execute: yarn
+  Para executar como ambiente de desenvolvimento:
+  2 - execute: yarn dev:server
+  Para executar como ambiente de produção:
+  2 - execute: yarn build
+  3 - execute: yarn start
  
 Pronto, se você manteve a configuração de porta padrão, basta acessar a url http://localhost:3333/recipes?i=ice e verá o resultado em Json, mais detalhes na doc abaixo sobre como usar a api.
 

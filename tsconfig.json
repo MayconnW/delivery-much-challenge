@@ -3,15 +3,17 @@
     "target": "es5" ,
     "module": "commonjs" ,
     "outDir": "./build" ,
-    "rootDir": "./src" ,
     "strict": true ,
     "strictPropertyInitialization": false,
     "baseUrl": "./src",
     "esModuleInterop": true ,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "sourceMap": true
   },
+  "lib": ["es2015"],
   "include": [
     "src"
   ]
